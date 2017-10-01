@@ -1,0 +1,52 @@
+Este é o diretório para o CET-088 Laboratório C
+
+**************************
+Executando a auto avaliação:
+**************************
+
+Antes de executar a auto avaliação, compile o seu código para criar o programa
+qtest
+    linux> make
+
+Cheque se seu código está correto:
+    linux> make test
+
+******
+Utilizando qtest:
+******
+
+qtest provê um interpretador de comando que pode criar e manipular filas.
+
+Execute ./qtest -h para ver a lista de opções de comando de linha.
+
+Quando você executa .qtest, ele irá lhe dar um prompt "cmd>". Digite "help"
+para ver uma lista de comandos disponíveis.
+
+******
+Arquivos:
+******
+
+# Você irá manipular estes dois arquivos
+queue.h			Versão modificada de declarações incluindo novos campos que você irá inserir
+queue.c			Versão modificada do códido de fila para fixar as deficiências do código original
+
+# Ferramentas para avaliar o seu códugo de fila
+Makefile		Constrói a o programa de avaliação qtest
+README			Este arquivo
+driver.py*		Programa de controlador do laboratório C, executa qtest sobre um conjunto de registros
+
+# Arquivos de ajuda
+
+console.{c,h}:		Implementa o interpretador de comando de linha para qtest
+report.{c,h}:  		Implementa a impressão da informação em diferentes nível de relatórios
+harness.{c,h}:		Versão customizada de malloc e free para relização de testes rigorosos
+qtest.c			      Código para qtest
+
+# Arquivos de Registros
+
+traces/trace-XX-CAT.cmd Arquivos de registros utilizados pelo Controlador.
+      São arquivos de entrada para qtest.
+      Eles são curtos e simples. É recomendável estudá-los para ver quais testes estão sendo realizados.
+			XX é o núemro de registro (1-14). CAT descreve a natureza do teste.
+
+trace/trace-eg.cmd:	Um simples, documento arquivo de registro para demonstrar a operação de qtest.
